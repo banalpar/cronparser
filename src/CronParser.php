@@ -150,7 +150,7 @@ class CronParser
 	public function calcLastRan($string)
 	{
 
- 		$tstart = microtime();
+ 		$tstart = microtime(1);
 		$this->debug = "";
 		$this->lastRan = 0;
 		$this->year = NULL;
@@ -280,7 +280,7 @@ class CronParser
 			}
 		}
 
-		$tend = microtime();
+		$tend = microtime(1);
 		$this->taken = $tend - $tstart;
 		$this->debug("Parsing $string taken " . $this->taken . " seconds");
 
